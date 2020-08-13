@@ -1,16 +1,17 @@
-import time, random
+import time
+import random
 iamlordvoldemort = ["thisismypasscode", "iamcoolxxx"]
-#Other user's lists...
+# Other user's lists...
 
-#Combining lists
+# Combining lists
 user_dict = {
     "iamlordvoldy": iamlordvoldemort
-    #Others ...
+    # Others ...
 }
 
 
-#Logging in and Signing up ...
-#Maybe make database in other version ???
+# Logging in and Signing up ...
+# Maybe make database in other version ???
 # * so that things don't get deleted when you stop the program
 def get_In():
     global x
@@ -39,8 +40,13 @@ def get_In():
     else:
         get_In()
 # x is username
+
+
+j = 0
 while True:
     if get_In():
+        while j < 100:
+            print(random.randint(0, 1))
         while True:
             i = input(str(x) + '@' + str(user_dict[x][1]) + ':~$ ')
     else:
