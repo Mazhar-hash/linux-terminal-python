@@ -1,11 +1,14 @@
 import time
 import random
-iamlordvoldemort = ["thisismypasscode", "iamcoolxxx"]
+
+
+guest = ["1234", "iamcoolxxx"]
 # Other user's lists...
+
 
 # Combining lists
 user_dict = {
-    "iamlordvoldy": iamlordvoldemort
+    "guest": guest
     # Others ...
 }
 
@@ -39,14 +42,26 @@ def get_In():
                 return True
     else:
         get_In()
+
+
 # x is username
+def load():
+    j = 5
+    q = 0
+    while j < 50000:
+        print(random.randint(0, 1), end='')
+        time.sleep(0.0001)
+        q += 1
+        if q > 100:
+            q = 0
+            print('')
+        j += 1
+    print('')
 
 
-j = 0
 while True:
     if get_In():
-        while j < 100:
-            print(random.randint(0, 1))
+        load()
         while True:
             i = input(str(x) + '@' + str(user_dict[x][1]) + ':~$ ')
     else:
